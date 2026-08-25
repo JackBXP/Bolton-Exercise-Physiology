@@ -270,12 +270,12 @@
     <hr class="modal-divider">
     <p class="modal-step-label" style="color:var(--green-light);font-size:.75rem;">Step 3 — Choose an available time ↓ scroll down</p>
     <div class="halaxy-iframe" style="overflow:visible;border-radius:8px;border:1px solid rgba(255,255,255,.1);">
-      <iframe id='cliniko-8021989' src='https://bolton-exercise-physiology.au5.cliniko.com/bookings?embedded=true' frameborder='0' scrolling='auto' width='100%' height='500' style='pointer-events:auto;display:block;border-radius:8px;' allow='payment'></iframe>
+      <iframe id='cliniko-32085337' src='https://bolton-exercise-physiology.au5.cliniko.com/bookings?embedded=true' frameborder='0' scrolling='auto' width='100%' height='500' style='pointer-events:auto;display:block;border-radius:8px;' allow='payment'></iframe>
     </div>
     <p style="text-align:center;margin-top:10px;font-size:.78rem;color:rgba(255,255,255,.4);">Calendar not loading? <a href="https://bolton-exercise-physiology.au5.cliniko.com/bookings" target="_blank" rel="noopener noreferrer" style="color:var(--green-light);font-weight:700;">Open booking page directly ↗</a></p>
     <script type='text/javascript'>
       window.addEventListener('message', function handleIFrameMessage(e) {
-        var clinikoBookings = document.getElementById('cliniko-8021989');
+        var clinikoBookings = document.getElementById('cliniko-32085337');
         if (typeof e.data !== 'string') return;
         if (e.data.search('cliniko-bookings-resize') > -1) {
           var height = Number(e.data.split(':')[1]);
@@ -615,7 +615,15 @@
   const obs = new IntersectionObserver(e => e.forEach(x => { if(x.isIntersecting) x.target.classList.add('visible'); }), {threshold:.08});
   document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-  function openModal() { document.getElementById('bookingModal').classList.add('open'); document.body.style.overflow='hidden'; }
+  function openModal() {
+    document.getElementById('bookingModal').classList.add('open');
+    document.body.style.overflow='hidden';
+    // Scroll modal to show Cliniko calendar after a short delay
+    setTimeout(() => {
+      const iframe = document.getElementById('cliniko-32085337');
+      if (iframe) iframe.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 600);
+  }
   function closeModal() { document.getElementById('bookingModal').classList.remove('open'); document.body.style.overflow=''; }
   document.addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
   function selectFunding(btn) { document.querySelectorAll('.modal-pill').forEach(p=>p.classList.remove('active')); btn.classList.add('active'); }
