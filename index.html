@@ -266,31 +266,27 @@
       <button class="modal-mode-pill" onclick="selectMode(this)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-gym"/></svg>Yarrabilba Gym
       </button>
+      <button class="modal-mode-pill" onclick="selectMode(this)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-pool"/></svg>Hydro Pool
+      </button>
     </div>
     <hr class="modal-divider">
     <p class="modal-step-label" style="color:var(--green-light);font-size:.75rem;">Step 3 — Choose an available time ↓ scroll down</p>
     <div class="halaxy-iframe" style="overflow:visible;border-radius:8px;border:1px solid rgba(255,255,255,.1);">
-      <iframe id='cliniko-32085337' src='https://bolton-exercise-physiology.au5.cliniko.com/bookings?embedded=true' frameborder='0' scrolling='auto' width='100%' height='500' style='pointer-events:auto;display:block;border-radius:8px;' allow='payment'></iframe>
+      <iframe id='halaxy-booking' src='https://www.halaxy.com/profile/mr-jack-bolton/exercise-physiologist/1810553' frameborder='0' scrolling='auto' width='100%' height='500' style='pointer-events:auto;display:block;border-radius:8px;' allow='payment'></iframe>
     </div>
-    <p style="text-align:center;margin-top:10px;font-size:.78rem;color:rgba(255,255,255,.4);">Calendar not loading? <a href="https://bolton-exercise-physiology.au5.cliniko.com/bookings" target="_blank" rel="noopener noreferrer" style="color:var(--green-light);font-weight:700;">Open booking page directly ↗</a></p>
+    <p style="text-align:center;margin-top:10px;font-size:.78rem;color:rgba(255,255,255,.4);">Calendar not loading? <a href="https://www.halaxy.com/profile/mr-jack-bolton/exercise-physiologist/1810553" target="_blank" rel="noopener noreferrer" style="color:var(--green-light);font-weight:700;">Open booking page directly ↗</a></p>
     <script type='text/javascript'>
       window.addEventListener('message', function handleIFrameMessage(e) {
-        var clinikoBookings = document.getElementById('cliniko-32085337');
+        var halaxyBookings = document.getElementById('halaxy-booking');
         if (typeof e.data !== 'string') return;
-        if (e.data.search('cliniko-bookings-resize') > -1) {
+        if (e.data.search('halaxy-bookings-resize') > -1) {
           var height = Number(e.data.split(':')[1]);
-          clinikoBookings.style.height = height + 'px';
+          halaxyBookings.style.height = height + 'px';
         }
-        e.data.search('cliniko-bookings-page') > -1 && clinikoBookings.scrollIntoView();
+        e.data.search('halaxy-bookings-page') > -1 && halaxyBookings.scrollIntoView();
       });
     </script>
-    <hr class="modal-divider">
-    <p class="modal-step-label">Step 4 — New client? We'll send your registration form</p>
-    <div class="email-wrap">
-      <label>Email Address</label>
-      <input type="email" id="modal-email" placeholder="your@email.com">
-    </div>
-    <button class="modal-book-btn" onclick="sendRegistration()">Send My Registration Form →</button>
   </div>
 </div>
 
@@ -346,7 +342,7 @@
     <div style="width:72px;height:3px;background:var(--green);margin:0 auto 20px;border-radius:2px;box-shadow:0 0 10px var(--green),0 0 24px rgba(34,160,96,.5),0 0 40px rgba(34,160,96,.25);"></div>
 
     <p class="hero-tagline" style="text-align:center;">Healthcare made accessible.</p>
-    <p class="hero-blurb" style="text-align:center;">Led by Director <strong style="color:var(--white);">Jack</strong> — Accredited Exercise Physiologist — BXP delivers evidence-based exercise therapy across five funding pathways, wherever you are.</p>
+    <p class="hero-blurb" style="text-align:center;">Led by Director <strong style="color:var(--white);">Jack</strong>, Accredited Exercise Physiologist. BXP delivers evidence-based exercise therapy across five funding pathways, wherever you are.</p>
 
     <div class="hero-btns" style="justify-content:center;">
       <button class="btn btn-green" onclick="openModal()">Book an Appointment →</button>
@@ -416,9 +412,9 @@
     <div class="divider fade-in"></div>
     <div class="about-grid">
       <div class="about-text fade-in">
-        <p>Jack founded BXP on a simple belief: quality exercise physiology should be accessible to everyone, regardless of funding type, location, or circumstance.</p>
-        <p>As an Accredited Exercise Physiologist, Jack brings genuine clinical depth to every client interaction, working across chronic disease, disability, injury rehabilitation, and aged care. He works alongside GPs, specialists, NDIS coordinators, WorkCover insurers, and aged care providers to ensure each program is safe, goal-directed, and effective.</p>
-        <p>Sessions are delivered in your home, at a hired gym or pool, or via Telehealth. Appointments available <strong style="color:var(--white);">Tuesdays 7:00 am – 7:00 pm.</strong></p>
+        <p>Jack founded BXP on a simple belief: quality exercise physiology should be accessible to everyone, regardless of funding type, location or circumstance.</p>
+        <p>As an Accredited Exercise Physiologist, Jack brings genuine clinical depth to every client interaction, working across chronic disease, disability, injury rehabilitation and aged care. He works alongside GPs, specialists, NDIS coordinators, WorkCover insurers and aged care providers to ensure each program is safe, goal-directed and effective.</p>
+        <p>Sessions are delivered in your home, at a hired gym or pool or via Telehealth. Appointments available <strong style="color:var(--white);">Tuesdays 7:00 am – 7:00 pm.</strong></p>
       </div>
       <div class="fade-in">
         <div class="cred-card"><strong>Accredited Exercise Physiologist (AEP)</strong><span>Exercise &amp; Sports Science Australia (ESSA)</span></div>
@@ -516,8 +512,8 @@
         <h3>Funded Rates</h3>
         <div class="funded-item">
           <p class="funded-label">NDIS</p>
-          <div class="funded-row"><span>30 min</span><span>$83.50</span></div>
-          <div class="funded-row"><span>60 min</span><span>$166.99</span></div>
+          <div class="funded-row"><span>30 min</span><span>$80.99</span></div>
+          <div class="funded-row"><span>60 min</span><span>$161.99</span></div>
         </div>
         <div class="funded-item">
           <p class="funded-label">WorkCover</p>
@@ -549,11 +545,11 @@
         </div>
         <div class="contact-info-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-mail"/></svg></div>
-          <div class="contact-detail"><strong>Email</strong><span>jackmpservices@outlook.com</span></div>
+          <div class="contact-detail"><strong>Email</strong><span>jack.bxp@outlook.com</span></div>
         </div>
         <div class="contact-info-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-calendar"/></svg></div>
-          <div class="contact-detail"><strong>Book Online</strong><span><a href="https://bolton-exercise-physiology.au5.cliniko.com/bookings" target="_blank" rel="noopener noreferrer">Cliniko — BXP booking page ↗</a></span></div>
+          <div class="contact-detail"><strong>Book Online</strong><span><a href="https://www.halaxy.com/profile/mr-jack-bolton/exercise-physiologist/1810553" target="_blank" rel="noopener noreferrer">Halaxy — BXP booking page ↗</a></span></div>
         </div>
         <div class="contact-info-item">
           <div class="contact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><use href="#icon-clock"/></svg></div>
@@ -606,7 +602,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2026 BXP &nbsp;·&nbsp; Director: Jack (AEP) &nbsp;·&nbsp; <a href="mailto:jackmpservices@outlook.com?subject=Privacy%20Enquiry">Privacy</a></p>
+    <p>© 2026 BXP &nbsp;·&nbsp; Director: Jack (AEP) &nbsp;·&nbsp; <a href="mailto:jack.bxp@outlook.com?subject=Privacy%20Enquiry">Privacy</a></p>
     <p>ESSA Accredited &nbsp;·&nbsp; NDIS Registered &nbsp;·&nbsp; Medicare Provider &nbsp;·&nbsp; WorkCover Approved</p>
   </div>
 </footer>
@@ -618,9 +614,9 @@
   function openModal() {
     document.getElementById('bookingModal').classList.add('open');
     document.body.style.overflow='hidden';
-    // Scroll modal to show Cliniko calendar after a short delay
+    // Scroll modal to show Halaxy calendar after a short delay
     setTimeout(() => {
-      const iframe = document.getElementById('cliniko-32085337');
+      const iframe = document.getElementById('halaxy-booking');
       if (iframe) iframe.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }, 600);
   }
@@ -635,12 +631,12 @@
     const funding = document.querySelector('.modal-pill.active')?.textContent || 'Not specified';
     const mode = document.querySelector('.modal-mode-pill.active')?.textContent?.trim() || 'Not specified';
     const subject = encodeURIComponent('BXP — Your New Client Registration Form');
-    const body = encodeURIComponent(`Hi,\n\nThank you for booking with BXP.\n\nFunding Pathway: ${funding}\nSession Type: ${mode}\n\nJack will be in touch to confirm your appointment.\n\nPhone: 0424 431 316\nEmail: jackmpservices@outlook.com\nAppointments: Tuesday 7:00 am – 7:00 pm.\n\nKind regards,\nJack\nBXP`);
+    const body = encodeURIComponent(`Hi,\n\nThank you for booking with BXP.\n\nFunding Pathway: ${funding}\nSession Type: ${mode}\n\nJack will be in touch to confirm your appointment.\n\nPhone: 0424 431 316\nEmail: jack.bxp@outlook.com\nAppointments: Tuesday 7:00 am – 7:00 pm.\n\nKind regards,\nJack\nBXP`);
     window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
     setTimeout(() => {
       const js = encodeURIComponent(`BXP New Booking — ${email} (${funding} · ${mode})`);
       const jb = encodeURIComponent(`New booking:\nClient: ${email}\nFunding: ${funding}\nSession: ${mode}`);
-      window.open(`mailto:jackmpservices@outlook.com?subject=${js}&body=${jb}`);
+      window.open(`mailto:jack.bxp@outlook.com?subject=${js}&body=${jb}`);
     }, 1000);
     closeModal();
     alert('Registration form sent! Check your email.');
@@ -652,7 +648,7 @@
     if(!first||!email){ alert('Please enter your name and email.'); return; }
     const subject = encodeURIComponent(`BXP Enquiry — ${first} ${document.getElementById('lastName').value.trim()}`);
     const body = encodeURIComponent(`Name: ${first} ${document.getElementById('lastName').value.trim()}\nEmail: ${email}\nPhone: ${document.getElementById('phone').value.trim()}\nFunding: ${document.getElementById('pathway').value}\n\nMessage:\n${document.getElementById('message').value.trim()}`);
-    window.location.href = `mailto:jackmpservices@outlook.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:jack.bxp@outlook.com?subject=${subject}&body=${body}`;
   }
 </script>
 </body>
